@@ -1,0 +1,67 @@
+@import url("./color-vars.pcss");
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  text-align: center;
+}
+
+.app__title {
+  margin-top: 96px;
+  font-weight: 600;
+  color: $accent_blue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.link {
+  cursor: pointer;
+  color: $accent_blue;
+  transition: color 0.3s ease-in-out;
+
+  &:active {
+    color: black;
+  }
+
+  &:visited {
+    color: $accent_blue;
+  }
+
+  &:hover {
+    color: $second_blue;
+    text-decoration: underline;
+  }
+}
+
+.error {
+  color: brown;
+}
+
+.success {
+  color: green;
+}
+
+.full_width {
+  width: 100%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  h1.app__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

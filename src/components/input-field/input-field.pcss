@@ -1,0 +1,80 @@
+@import url("../../styles/color-vars.pcss");
+
+label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem 0;
+}
+
+.placeholder {
+  position: absolute;
+  z-index: 1000;
+  top: 16px;
+  left: 8px;
+  transform-origin: 0 0;
+
+  color: $accent_blue;
+
+  transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.input_text:focus ~ .placeholder,
+.input_text:not(:placeholder-shown) ~ .placeholder {
+  transform: scale(0.95) translateY(-38px);
+  color: $second_gray;
+  opacity: 0.6;
+}
+
+.input,
+.select {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+
+  font-size: 1rem;
+
+  background-color: $bg_blue;
+  border: none;
+  border-bottom: 2px solid $accent_blue;
+  border-radius: 5px 5px 0 0;
+}
+
+.input_error {
+  color: brown;
+  background-color: rgb(150 52 52/ 15%);
+  border-color: brown;
+}
+
+.error_text {
+  position: absolute;
+  bottom: -36px;
+  font-size: 12px;
+  color: brown;
+}
+
+.placeholder_error {
+  color: brown;
+}
+
+#birthday {
+  max-width: 140px;
+}
+
+select.select {
+  transition: 0.1s filter ease-in-out;
+}
+
+select.select:hover {
+  filter: brightness(90%);
+}
+
+select.select:active,
+select.select:focus {
+  filter: brightness(70%);
+  outline: 0;
+  outline-offset: 0;
+}

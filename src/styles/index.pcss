@@ -1,0 +1,85 @@
+@import url("./color-vars.pcss");
+@import url("./App.pcss");
+@import url("../pages/registration-page/registration-page.pcss");
+@import url("../components/header/header.pcss");
+@import url("../components/footer/footer.pcss");
+@import url("../components/wrapper/wrapper.pcss");
+@import url("../components/input-field/input-field.pcss");
+@import url("../components/nav/nav.pcss");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #223;
+  text-rendering: optimizelegibility;
+
+  font-synthesis: none;
+}
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #223;
+  text-rendering: optimizelegibility;
+
+  background-color: $bg_light_blue;
+
+  font-synthesis: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $second_blue;
+  }
+}
+
+.text {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.title_text {
+  margin-top: 22px;
+  font-size: 18px;
+}
+
+button {
+  transition: 0.1s background ease-in-out;
+}
+
+button:disabled {
+  pointer-events: none;
+  background: rgb(153 185 221);
+}
+
+input {
+  transition: 0.1s filter ease-in-out;
+}
+
+input:hover {
+  filter: brightness(90%);
+}
+
+input:active,
+input:focus {
+  filter: brightness(70%);
+  outline: 0;
+  outline-offset: 0;
+}

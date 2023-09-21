@@ -1,0 +1,274 @@
+@import url("../../styles/color-vars.pcss");
+
+footer {
+  margin-top: 4rem;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  a {
+    font-weight: 600;
+    color: $second_blue;
+    text-decoration: none;
+
+    &:visited {
+      color: $second_blue;
+    }
+
+    &:hover {
+      color: $accent_blue;
+      text-decoration: none;
+    }
+  }
+
+  &&__container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: max-content;
+
+    background: $accent_blue;
+    background: linear-gradient(180deg, rgb(7 166 255) 0%, rgb(7 114 199) 100%);
+  }
+
+  &&__image {
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+
+    background-image: url("../../assets/horses_main.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding-bottom: 16px;
+
+    background: $bg_blue_gray_gradient;
+
+    &-icon {
+      display: flex;
+      transition: scale 0.3s ease-in-out;
+
+      &:hover {
+        scale: 1.05;
+        filter: drop-shadow(0 0 0 rgb(255 255 255 / 0%));
+      }
+
+      &_phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 36px;
+        height: 36px;
+
+        background-color: orangered;
+        border-radius: 10px;
+      }
+
+      &_mail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 36px;
+        height: 36px;
+
+        background-color: $accent_blue;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__box-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 4px 0;
+
+    background-color: $bg_dark_blue;
+    border-radius: 10px 0 0 10px;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $bg_blue;
+    }
+
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  &__logo {
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__box-logo {
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    background: rgb(255 166 0 / 80%);
+    border-radius: 50px;
+
+    transition: scale 0.3s ease-in-out;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  &&__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-start;
+
+    max-width: 180px;
+    padding-left: 16px;
+
+    &_contact {
+      justify-content: flex-end;
+      max-width: 90px;
+      margin-right: 16px;
+      padding-left: 0;
+    }
+  }
+
+  &__icon {
+    scale: 1;
+    width: 32px;
+    filter: drop-shadow(0 0 0 rgb(255 255 255 / 0%));
+
+    &_phone {
+      width: 25px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+
+    border-radius: 10px;
+  }
+
+  &&__content {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 780px;
+    height: 50%;
+    padding: 12px 0 0;
+  }
+
+  &&__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    max-width: 500px;
+    padding-right: 16px;
+
+    font-size: 14px;
+    text-align: right;
+
+    h3,
+    h1 {
+      color: white;
+      text-align: right;
+    }
+  }
+
+  &&__title {
+    font-size: 18px;
+  }
+
+  &&__atr {
+    position: absolute;
+    z-index: 10;
+    right: 8px;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    width: 200px;
+    height: 100%;
+
+    font-size: 8px;
+    color: aliceblue;
+    text-align: right;
+
+    opacity: 0.6;
+
+    a {
+      color: aliceblue;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .footer {
+    &__box-logo {
+      background: none;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 4px;
+      padding: 6px;
+    }
+
+    &__box-link {
+      border-radius: 10px 10px 0 0;
+
+      &:last-child {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .footer__content:last-child {
+    flex-direction: column-reverse;
+  }
+}
